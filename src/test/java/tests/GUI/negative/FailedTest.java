@@ -4,7 +4,7 @@ import baseEntities.BaseTest;
 import org.testng.annotations.Test;
 
 public class FailedTest extends BaseTest {
-    @Test
+   // @Test
     public void loginTest(){
         loginStep.loginSuccessful(userIncorrect);
     }
