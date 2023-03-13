@@ -10,10 +10,12 @@ public class DashboardStep extends BaseStep {
     public void goToProjectCreation(){
         dashboardPage.getAddProjectButton().click();
     }
+
     @Step
     public void goToProject(){
         dashboardPage.getProjectName().click();
     }
+
     @Step
     public SelenideElement hoverToResetButton() {
         dashboardPage.getResetButton().hover();

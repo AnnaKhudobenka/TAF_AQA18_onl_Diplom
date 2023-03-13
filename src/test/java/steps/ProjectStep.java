@@ -27,6 +27,7 @@ public class ProjectStep extends BaseStep {
         addProjectPage.getAddProjectButton().click();
        return projectOverviewPage.getSuccessfulMessage();
     }
+
     @Step
     public void goBackToDashboard(){
         projectOverviewPage.getDashboardButton().click();
@@ -37,6 +38,7 @@ public class ProjectStep extends BaseStep {
     public void goToTestCases(){
         projectPage.getTestCasesSection().click();
     }
+
     @Step
     public String uploadFile() {
         String pathToFile = FileUploadTest.class.getClassLoader().getResource("testcaselogo.png").getPath().substring(1);
@@ -50,6 +52,7 @@ public class ProjectStep extends BaseStep {
         System.out.println(string);
         return string;
     }
+
     @Step
     public SelenideElement addTable(){
         projectPage.getAddTestCaseButton().click();
