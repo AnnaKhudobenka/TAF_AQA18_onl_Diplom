@@ -1,0 +1,6 @@
+{
+  "name": "Test Api Project 001",
+  "announcement": "This is test project for Api test",
+  "show_announcement": true,
+  "suite_mode": 1
+}
