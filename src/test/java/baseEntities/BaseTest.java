@@ -66,6 +66,7 @@ public class BaseTest {
 
         open("");
     }
+
     @AfterMethod
     public void tearDown() {
         closeWebDriver();

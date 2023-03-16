@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.open;
 
 public class InputDataThatExceedsTheAllowableLimitsTest extends BaseTest {
-    @Test(description = "Тест на ввод данных превышающих допустимые ")
+    @Test(description = "Тест на ввод данных, превышающих допустимые")
     public void InputDataThatExceedsTheAllowableLimitsTest(){
         loginStep.loginWithLongPassword(userWithLongPassword).shouldHave(text("Field Password is too long (128 characters at most)."));
     }
