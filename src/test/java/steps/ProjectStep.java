@@ -17,7 +17,7 @@ import java.util.Arrays;
 import static com.codeborne.selenide.Selenide.*;
 
 public class ProjectStep extends BaseStep {
-    @Step
+    @Step("Добавление проекта")
     public SelenideElement createProject(Project project){
         logger.info("In step createProject Project object is using, wich contains fields: " + project);
         addProjectPage.getProjectNameInput().setValue(project.getName());
@@ -27,17 +27,17 @@ public class ProjectStep extends BaseStep {
         addProjectPage.getAddProjectButton().click();
        return projectOverviewPage.getSuccessfulMessage();
     }
-    @Step
+    @Step("Переход на главную страницу")
     public void goBackToDashboard(){
         projectOverviewPage.getDashboardButton().click();
         dashboardPage.getAddProjectButton();
     }
 
-    @Step
+    @Step("Переход в секцию тест-кейсов")
     public void goToTestCases(){
         projectPage.getTestCasesSection().click();
     }
-    @Step
+    @Step("Загрузка файла")
     public String uploadFile() {
         String pathToFile = FileUploadTest.class.getClassLoader().getResource("testcaselogo.png").getPath().substring(1);
         projectPage.getAddTestCaseButton().click();
@@ -50,7 +50,7 @@ public class ProjectStep extends BaseStep {
         System.out.println(string);
         return string;
     }
-    @Step
+    @Step("Добавление таблицы")
     public SelenideElement addTable(){
         projectPage.getAddTestCaseButton().click();
         testCasesPage.getTitleInput().setValue("Verify that file upload works correctly");
@@ -59,7 +59,7 @@ public class ProjectStep extends BaseStep {
         return testCasesPage.getPreconditionInput();
     }
 
-    @Step
+    @Step("Удаление проекта")
     public SelenideElement deleteProject(){
         projectOverviewPage.getDeleteButton().click();
         projectOverviewPage.getCheckbox().click();
