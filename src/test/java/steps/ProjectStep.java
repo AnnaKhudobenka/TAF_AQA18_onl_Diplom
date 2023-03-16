@@ -1,20 +1,12 @@
 package steps;
 
 import baseEntities.BaseStep;
-import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-import io.netty.channel.SelectStrategy;
 import io.qameta.allure.Step;
 import models.Project;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import tests.GUI.positive.FileUploadTest;
 
 import java.io.File;
-import java.util.Arrays;
-
-import static com.codeborne.selenide.Selenide.*;
 
 public class ProjectStep extends BaseStep {
     @Step("Добавление проекта")
@@ -27,6 +19,7 @@ public class ProjectStep extends BaseStep {
         addProjectPage.getAddProjectButton().click();
        return projectOverviewPage.getSuccessfulMessage();
     }
+
     @Step("Переход на главную страницу")
     public void goBackToDashboard(){
         projectOverviewPage.getDashboardButton().click();
@@ -37,6 +30,7 @@ public class ProjectStep extends BaseStep {
     public void goToTestCases(){
         projectPage.getTestCasesSection().click();
     }
+
     @Step("Загрузка файла")
     public String uploadFile() {
         String pathToFile = FileUploadTest.class.getClassLoader().getResource("testcaselogo.png").getPath().substring(1);
@@ -50,6 +44,7 @@ public class ProjectStep extends BaseStep {
         System.out.println(string);
         return string;
     }
+    
     @Step("Добавление таблицы")
     public SelenideElement addTable(){
         projectPage.getAddTestCaseButton().click();
