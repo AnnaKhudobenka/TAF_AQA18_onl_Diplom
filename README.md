@@ -38,6 +38,8 @@ b. 	Post - 3 теста - NFE + 2 AFE
 
 Индивидуальное задание:
 
-Использовать PageObject + Builder + Selenide + TestNG c параллельным запуском Jenkins
+Использовать PageObject + Builder + Selenide + TestNG c параллельным запуском 
+
+Jenkins
 
 Создать данные для тестов используя API, данные взять из JSON
